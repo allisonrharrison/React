@@ -37,7 +37,7 @@ function RenderDish({ dish }) {
   );
 }
 
-function RenderComments({ comments, addComment, dishId }) {
+function RenderComments({ comments, postComment, dishId }) {
   if (comments) {
     return (
       <div className="col-12 col-md-5 m-1">
@@ -57,7 +57,7 @@ function RenderComments({ comments, addComment, dishId }) {
               </p>
             );
           })}
-          <CommentForm dishId={dishId} addComment={addComment}/>
+          <CommentForm dishId={dishId} postComment={postComment}/>
         </ul>
       </div>
     );
@@ -101,7 +101,7 @@ const DishDetail = props => {
         </div>
         <div className="row">
           <RenderDish dish={props.dish} />
-          <RenderComments comments={props.comments} addComment={props.addComment} dishId={props.dish.id} />
+          <RenderComments comments={props.comments} postComment={props.postComment} dishId={props.dish.id} />
         </div>
       </div>
     );
@@ -130,7 +130,7 @@ class CommentForm extends Component {
     console.log("Current State is: " + JSON.stringify(values));
     alert("Current State is: " + JSON.stringify(values));
     this.toggleModal();
-    this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+    this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
   }
 
   render() {
