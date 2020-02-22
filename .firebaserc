@@ -1,5 +1,9 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "confusion-react-e5db1"
+=======
+    "default": "confusionserver-913e7"
+>>>>>>> newbranch
   }
 }
