@@ -170,22 +170,22 @@ class Main extends Component {
             timeout={300}
           >
             <Switch>
-              <Route path="React/home" component={HomePage} />
+              <Route path="/home" component={HomePage} />
               <Route
                 exact
-                path="React/aboutus"
+                path="/aboutus"
                 component={() => <About leaders={this.props.leaders} />}
               />
               } />
               <Route
                 exact
-                path="React/menu"
+                path="/menu"
                 component={() => <Menu dishes={this.props.dishes} />}
               />
-              <Route path="React/menu/:dishId" component={DishWithId} />
+              <Route path="/menu/:dishId" component={DishWithId} />
               <PrivateRoute
                 exact
-                path="React/favorites"
+                path="/favorites"
                 component={() => (
                   <Favorites
                     favorites={this.props.favorites}
@@ -196,7 +196,7 @@ class Main extends Component {
               />
               <Route
                 exact
-                path="React/contactus"
+                path="/contactus"
                 component={() => (
                   <Contact
                     resetFeedbackForm={this.props.resetFeedbackForm}
@@ -204,7 +204,7 @@ class Main extends Component {
                   />
                 )}
               />
-              <Redirect to="React/home" />
+              <Redirect to="/home" />
             </Switch>
           </CSSTransition>
         </TransitionGroup>
