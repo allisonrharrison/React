@@ -2,7 +2,6 @@
   "database": {
     "rules": "database.rules.json"
   },
-<<<<<<< HEAD
   "hosting": {
     "public": "public",
     "ignore": [
@@ -15,8 +14,7 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
-=======
+    ],
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
@@ -28,6 +26,6 @@
   },
   "storage": {
     "rules": "storage.rules"
->>>>>>> newbranch
   }
+}
 }
